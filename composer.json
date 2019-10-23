@@ -1,5 +1,5 @@
 {
-    "name": "pawco/dhl_api",
+    "name": "pawco/dhl-api",
 
     "description": "PHP library to communicate with the DHL XML Services.",
 
