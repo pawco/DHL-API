@@ -230,11 +230,14 @@ abstract class Base extends BaseDataType
     {
         $xml = simplexml_load_string(str_replace('req:', '', $xml));
 
-        if ((string) $xml->Response->Status->Condition->ConditionCode != '')
-        {
-            $errorMsg = ((string) $xml->Response->Status->Condition->ConditionCode) . ' : ' . ((string) $xml->Response->Status->Condition->ConditionData);
-            throw new \Exception('Error returned from DHL webservice : ' . $errorMsg);
-        }
+        /**
+         * @todo: improve
+         */
+//        if ((string) $xml->Response->Status->Condition->ConditionCode != '')
+//        {
+//            $errorMsg = ((string) $xml->Response->Status->Condition->ConditionCode) . ' : ' . ((string) $xml->Response->Status->Condition->ConditionData);
+//            throw new \Exception('Error returned from DHL webservice : ' . $errorMsg);
+//        }
 
         $parts = explode('\\', get_class($this));
         $className = array_pop($parts);

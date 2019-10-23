@@ -196,9 +196,12 @@ class ShipmentResponse extends Base
             'required' => false,
             'subobject' => true,
             'multivalues' => true,
-        ), 
-        'BarCodes' => array(
-            'type' => 'BarCodes',
+        ),
+        /**
+         * Check again
+         */
+        'Barcodes' => array(
+            'type' => 'Barcodes',
             'required' => false,
             'subobject' => true,
             'multivalues' => false,
